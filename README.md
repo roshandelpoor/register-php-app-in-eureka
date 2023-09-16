@@ -58,7 +58,9 @@ List of all(default) available configuration are as follows:
 You can also change the configuration after creating `EurekaClient` instance, using setter methods:
 
 ```php
+
 $client->getEurekaConfig()->setAppName("NAME_APP_FOR_REGISTER_IN_EUREKA");
+
 ```
 
 ### Operations
@@ -68,25 +70,33 @@ After creating EurekaClient instance, there will be multiple operations to perfo
 - **Registration:** register your service instance with Eureka
 
 ```php
+
 $client->register();
+
 ```
 
 - **De-registration:** de-register your service instance from Eureka
 
 ```php
+
 $client->deRegister();
+
 ```
 
 - **Heartbeat:** send heartbeat to Eureka, to show the client is up (one-time heartbeat)
 
 ```php
+
 $client->heartbeat();
+
 ```
 
 You can register your instance and send periodic heartbeat using `start()` method:
 
 ```php
+
 $client->start();
+
 ```
 
 Using this method, first your service gets registered with Eureka using the
@@ -95,7 +105,9 @@ on `heartbeatInterval` configuration value. This interval time can be changed ju
 configuration item:
 
 ```php
+
 $client->getEurekaConfig()->setHeartbeatInterval(30); // 30 seconds
+
 ``` 
 
 It's apparent that this method should be used in CLI.
@@ -103,8 +115,10 @@ It's apparent that this method should be used in CLI.
 - **Service Discovery**: fetch an instance of a service from Eureka:
 
 ```php
+
 $instance = $client->fetchInstance("the-service");
 $homePageUrl = $instance->homePageUrl;
+
 ```
 
 ### Discovery Strategy
@@ -129,7 +143,9 @@ class RoundRobinStrategy implements DiscoveryStrategy {
 Then, all you have to do is to introduce your custom strategy to `EurekaClient` instance:
 
 ```php
+
 $client->getEurekaConfig()->setDiscoveryStrategy(new RoundRobinStrategy());
+
 ```
 
 ### Local Registry and Caching
@@ -161,7 +177,9 @@ are loading them when Eureka is down.
 After creating your custom provider, just make it work by adding it to the configuration:
 
 ```php
+
 $client->getEurekaConfig()->setInstanceProvider(new MyProvider());
+
 ```
 
 Your custom provider only gets called when Eureka is down or is not answering properly.
@@ -173,7 +191,9 @@ For caching all available instances of a specific service, you can call `fetchIn
 which fetches all the instances of the service from Eureka:
 
 ```php
+
 $instances = $client->fetchInstances("get_NAME_Another_APP_From_EUREKA");
+
 ```
 
 # Contributing
