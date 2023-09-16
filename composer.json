@@ -1,0 +1,34 @@
+{
+  "name": "roshandelpoor/register-php-app-in-eureka",
+  "version": "2.1.5",
+  "description": "This Package is Eureka Client And it's a library that interacts with the Eureka Server to register, deregister, and discover other services. Finally, I Want To Emphasize that This is NOT New Package (ONLY Fix Bug for package piwvh/php-eureka) Because of My Microservices Projects that I have to custom it",
+  "keywords": [
+    "php",
+    "laravel",
+    "eureka",
+    "eureka server",
+    "spring cloud",
+    "microservice architecture",
+    "centralized registry"
+  ],
+  "homepage": "https://github.com/roshandelpoor/register-php-app-in-eureka",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Mohammad Roshandelpoor",
+      "email": "mohammad.roshandelpoor@gmail.com",
+      "homepage": "http://roshandelpoor.ir"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=5.6.0",
+    "guzzlehttp/guzzle": "^7.0.1",
+    "ext-json": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "EurekaClient\\": "src/"
+    }
+  }
+}
