@@ -13,7 +13,7 @@ Microservices Projects that I have to custom it.
 
 You can install this package using [Composer]:
 
-`composer require "roshandelpoor/register-php-app-in-eureka"`
+`composer require --dev roshandelpoor/register-php-app-in-eureka:dev-main`
 
 # Documentation
 
