@@ -23,14 +23,14 @@ The very first thing you need to do is to create an instance of `EurekaClient` u
 
 ```php
 $client = new EurekaClient([
-    'eurekaDefaultUrl' => 'http://localhost:8761/myeureka',
-    'hostName' => gethostname(),
-    'appName' => 'NAME_APP_FOR_REGISTER_IN_EUREKA',
-    'ip' => '127.0.0.1',
-    'port' => ['8000', true],
-    'homePageUrl' => 'http://localhost:8000',
-    'statusPageUrl' => 'http://localhost:8000/info',
-    'healthCheckUrl' => 'http://localhost:8000/health'
+    'eurekaDefaultUrl'  => 'http://localhost:8761/myeureka',
+    'hostName'          => gethostname(),
+    'appName'           => 'NAME_APP_FOR_REGISTER_IN_EUREKA',
+    'ip'                => '127.0.0.1',
+    'port'              => ['8000', true],
+    'homePageUrl'       => 'http://localhost:8000',
+    'statusPageUrl'     => 'http://localhost:8000/info',
+    'healthCheckUrl'    => 'http://localhost:8000/health'
 ]);
 ```
 
@@ -198,7 +198,8 @@ $instances = $client->fetchInstances("get_NAME_Another_APP_From_EUREKA");
 
 # Contributing
 
-If you find any bugs or have suggestions for new features, feel free to open an issue or submit a pull request on GitHub.
+If you find any bugs or have suggestions for new features, feel free to open an issue or submit a pull request on
+GitHub.
 
 # License
 
